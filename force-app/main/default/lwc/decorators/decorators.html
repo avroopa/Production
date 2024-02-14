@@ -1,0 +1,28 @@
+<template>
+    <div>
+        <h1> Track</h1>
+    <h1>Counter :{counter}</h1>
+    <button class="slds-button slds-button_neutral" onclick={increaseCounter} >Increase Counter</button>
+    <h1>Counter 2 :{exampleObject.counter}</h1>
+    <button class="slds-button slds-button_neutral" onclick={increaseCounterWithTrack} >Increase Counter2</button>
+</div>
+<div>
+    <h1> API</h1>
+    <h1>Parent Component</h1>
+    <lightning-input type="text" label="Enter First Number" lwc:ref="firstNumber"  class="slds-m-right_small"></lightning-input>
+    <lightning-input type="text" label="Enter Second Number" lwc:ref="secondNumber"  class="slds-m-right_small"></lightning-input>
+    <button class="slds-button slds-button_neutral" onclick={submitNumbers} >Submit</button>
+    <button class="slds-button slds-button_neutral" onclick={multiply} >Multiply</button>
+    <h1>Child Component</h1>
+<c-decorator-child-component lwc:ref = "childComponent" first-number = {number1} second-number = {number2}></c-decorator-child-component>
+</div>
+<div>
+    <h1>WIRE</h1>
+    <lightning-input type="text" label="Name" lwc:ref="nameString"  class="slds-m-right_small"></lightning-input>
+    <lightning-datatable
+                key-field="id"
+                data={userTable}
+                columns={columns}>
+        </lightning-datatable>
+</div>
+</template>
